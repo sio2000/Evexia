@@ -1,0 +1,139 @@
+{
+  "euStrategy": {
+    "title": "EU Hydrogen Strategy",
+    "subtitle": "Our commitment to Europe's clean energy future",
+    "description": "We are actively participating in the European Union's hydrogen strategy, contributing to the goal of achieving climate neutrality by 2050.",
+    "goals": {
+      "title": "Strategic Goals",
+      "items": [
+        {
+          "title": "Clean Energy",
+          "description": "Promoting hydrogen as a key clean energy carrier"
+        },
+        {
+          "title": "Innovation",
+          "description": "Driving technological innovation in hydrogen production"
+        },
+        {
+          "title": "Integration",
+          "description": "Integrating hydrogen into existing energy systems"
+        }
+      ]
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "text": "We are dedicated to supporting the EU's hydrogen strategy through continuous innovation and sustainable practices."
+    },
+    "cleanEnergy": {
+      "title": "Clean Energy",
+      "description": "Transition to sustainable energy sources"
+    },
+    "independence": {
+      "title": "Independence",
+      "description": "Energy autonomy from traditional sources"
+    },
+    "greeceRole": {
+      "title": "Greece's Role",
+      "description": "Strategic position and development initiatives make Greece a key player in EU's hydrogen future"
+    },
+    "imageAlt": "European Energy Infrastructure",
+    "future": {
+      "title": "Powering Europe's Future"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Discover our range of high-quality hydrogen products",
+    "buyButton": "Buy Now",
+    "items": [
+      {
+        "name": "Hydrogen Fuel Cell",
+        "description": "Advanced fuel cell technology for clean energy generation",
+        "price": "2,999",
+        "image": "/images/products/fuel-cell.jpg",
+        "features": [
+          "High efficiency",
+          "Zero emissions",
+          "Long lifespan",
+          "Easy maintenance"
+        ],
+        "tag": "New"
+      },
+      {
+        "name": "Hydrogen Storage Tank",
+        "description": "Safe and efficient hydrogen storage solution",
+        "price": "1,499",
+        "image": "/images/products/storage-tank.jpg",
+        "features": [
+          "Large capacity",
+          "Safety certified",
+          "Pressure regulated",
+          "Temperature controlled"
+        ],
+        "tag": "Popular"
+      },
+      {
+        "name": "Hydrogen Generator",
+        "description": "Compact hydrogen generation system",
+        "price": "3,999",
+        "image": "/images/products/generator.jpg",
+        "features": [
+          "High output",
+          "Energy efficient",
+          "Smart monitoring",
+          "Remote control"
+        ],
+        "tag": "Premium"
+      }
+    ]
+  },
+  "scientific": {
+    "title": "Scientific Research",
+    "subtitle": "Advancing hydrogen technology through research",
+    "description": "Our commitment to scientific excellence drives innovation in hydrogen production and applications.",
+    "research": {
+      "title": "Research Areas",
+      "items": [
+        {
+          "title": "Production Methods",
+          "description": "Developing efficient and sustainable hydrogen production technologies"
+        },
+        {
+          "title": "Storage Solutions",
+          "description": "Innovative approaches to hydrogen storage and distribution"
+        },
+        {
+          "title": "Applications",
+          "description": "Exploring new applications for hydrogen in various sectors"
+        }
+      ]
+    },
+    "partnerships": {
+      "title": "Research Partnerships",
+      "text": "We collaborate with leading research institutions and universities worldwide to advance hydrogen technology."
+    }
+  },
+  "certifications": {
+    "subtitle": "Pure Innovation",
+    "title": "Why Choose Our Device?",
+    "description": "There are many Hydrogen Water Devices in the market. Make sure to choose a certified, reliable solution backed by science.",
+    "items": [
+      {
+        "title": "Safety Certified",
+        "description": "Meets international safety standards for water treatment devices"
+      },
+      {
+        "title": "Quality Tested",
+        "description": "Regular quality control and performance testing"
+      },
+      {
+        "title": "Award Winning",
+        "description": "Recognized for innovation in water treatment technology"
+      },
+      {
+        "title": "Documented Results",
+        "description": "Backed by scientific research and clinical studies"
+      }
+    ]
+  }
+} 
