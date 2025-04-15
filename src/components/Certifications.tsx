@@ -65,26 +65,26 @@ const Certifications = () => {
           }
         `}
       </style>
-      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-white">
+      <section className="relative py-24 overflow-hidden bg-[#D89084]">
         {/* Bubble Effects */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-sky-200/40 rounded-full filter blur-3xl animate-float" />
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-sky-100/30 rounded-full filter blur-3xl animate-float animation-delay-200" />
-          <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-blue-100/20 rounded-full filter blur-3xl animate-float animation-delay-400" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/20 rounded-full filter blur-3xl animate-float" />
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-white/15 rounded-full filter blur-3xl animate-float animation-delay-200" />
+          <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-white/10 rounded-full filter blur-3xl animate-float animation-delay-400" />
         </div>
 
         {/* Wave Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxNDQwIDUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwYzI0MC43MiAwIDI0MC43MiA1MCA0ODEuNDQgNTBzMjQwLjcyLTUwIDQ4MS40NC01MFMxMTk5LjI4IDUwIDE0NDAgNTBWNTAwSDBWMHoiIGZpbGw9IiNFMEY3RkYiIGZpbGwtb3BhY2l0eT0iMC4yIi8+PC9zdmc+')] bg-repeat-x bg-bottom opacity-30" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxNDQwIDUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwYzI0MC43MiAwIDI0MC43MiA1MCA0ODEuNDQgNTBzMjQwLjcyLTUwIDQ4MS40NC01MFMxMTk5LjI4IDUwIDE0NDAgNTBWNTAwSDBWMHoiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC4yIi8+PC9zdmc+')] bg-repeat-x bg-bottom opacity-30" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="inline-block text-sky-700 text-sm font-semibold tracking-wider uppercase mb-4 animate-fade-in-up">
+            <span className="inline-block text-white text-sm font-semibold tracking-wider uppercase mb-4 animate-fade-in-up">
               {t('certifications.subtitle')}
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-sky-900 mb-6 animate-fade-in-up animation-delay-200">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up animation-delay-200">
               {t('certifications.title')}
             </h2>
-            <p className="text-xl text-sky-700 max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
               {t('certifications.description')}
             </p>
           </div>
@@ -93,22 +93,22 @@ const Certifications = () => {
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="group bg-white/80 backdrop-blur-lg rounded-2xl p-8 text-center hover:bg-sky-50/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(14,165,233,0.15)] animate-fade-in-up"
+                className="group bg-white/90 backdrop-blur-lg rounded-2xl p-8 text-center hover:bg-white transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,255,255,0.2)] animate-fade-in-up"
                 style={{ animationDelay: `${cert.delay}ms` }}
               >
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-sky-100 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    {cert.icon}
+                  <div className="p-4 bg-[#D89084]/10 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    {React.cloneElement(cert.icon, { className: "h-12 w-12 text-[#D89084]" })}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-sky-900 mb-4 group-hover:text-sky-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-[#D89084] transition-colors">
                   {cert.title}
                 </h3>
-                <p className="text-sky-700 group-hover:text-sky-800 transition-colors">
+                <p className="text-gray-700">
                   {cert.description}
                 </p>
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Sparkles className="h-6 w-6 text-sky-500 mx-auto animate-sparkle" />
+                  <Sparkles className="h-6 w-6 text-[#D89084] mx-auto animate-sparkle" />
                 </div>
               </div>
             ))}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Award } from 'lucide-react';
-import blueImage from '../../assets/images/blue.jpg';
+import blueImage from '../../assets/images/hydrogencup.png';
 import { useTranslation } from 'react-i18next';
 
 const WestMacedonia = () => {

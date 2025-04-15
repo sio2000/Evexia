@@ -32,6 +32,18 @@ const Navbar = () => {
                   <Menu.Item>
                     {({ active }) => (
                       <Link
+                        to="/hydrogen-water"
+                        className={`${
+                          active ? 'bg-sky-50 text-sky-600' : 'text-gray-700'
+                        } block px-4 py-2 text-sm`}
+                      >
+                        {t('nav.hydrogenWater')}
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link
                         to="/humans"
                         className={`${
                           active ? 'bg-sky-50 text-sky-600' : 'text-gray-700'

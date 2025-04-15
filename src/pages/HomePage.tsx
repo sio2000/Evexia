@@ -8,6 +8,8 @@ import WestMacedonia from '../components/WestMacedonia';
 import Transportation from '../components/Transportation';
 import EUStrategy from '../components/EUStrategy';
 import HealthBenefits from '../components/HealthBenefits';
+import HydrogenBenefits from '../components/HydrogenBenefits';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
   useEffect(() => {
@@ -17,6 +19,7 @@ const HomePage = () => {
   return (
     <main className="overflow-hidden">
       <Hero />
+      <HydrogenBenefits />
       <HealthBenefits />
       <WestMacedonia />
       <Transportation />
@@ -24,7 +27,6 @@ const HomePage = () => {
       <Scientific />
       <EUStrategy />
       <About />
-      <Certifications />
     </main>
   );
 };

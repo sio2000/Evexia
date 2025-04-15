@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import HumansPage from './pages/HumansPage';
 import AnimalsPage from './pages/AnimalsPage';
 import PlantsPage from './pages/PlantsPage';
+import HydrogenWater from './pages/HydrogenWater';
 import './i18n/i18n';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/humans" element={<HumansPage />} />
           <Route path="/animals" element={<AnimalsPage />} />
           <Route path="/plants" element={<PlantsPage />} />
+          <Route path="/hydrogen-water" element={<HydrogenWater />} />
         </Routes>
         <Footer />
       </div>

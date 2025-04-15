@@ -16,13 +16,19 @@ const Products = () => {
   const products = t('products.items', { returnObjects: true }) as Product[];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('products.title')}</h2>
-          <p className="text-xl text-gray-600">
+          <div className="inline-block px-6 py-2 bg-[#D89084]/10 rounded-full text-[#D89084] font-medium text-sm mb-4">
+            Our Collection
+          </div>
+          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#2C3E50] to-[#3498DB] mb-6">
+            {t('products.title')}
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
             {t('products.subtitle')}
           </p>
+          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-[#D89084] to-[#E8B4B4] mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -35,7 +41,7 @@ const Products = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">
-                  <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-blue-600 rounded-full">
+                  <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-[#D89084] rounded-full">
                     {product.tag}
                   </span>
                 </div>
@@ -48,7 +54,7 @@ const Products = () => {
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-gray-900">€{product.price}</span>
-                  <button className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                  <button className="flex items-center space-x-2 bg-[#D89084] text-white px-4 py-2 rounded-lg hover:bg-[#c27e72] transition">
                     <ShoppingCart className="h-5 w-5" />
                     <span>{t('products.buyButton')}</span>
                   </button>

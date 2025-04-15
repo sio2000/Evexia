@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../../assets/images/waterfontana.jpg';
+import backgroundImage from '../../assets/images/waterfontana.jpeg';
 import botImage from '../../assets/images/bot.jpg';
 import symbolImage from '../../assets/images/symbol.jpg';
-import rosewoodImage from '../../assets/images/rosewood.jpg';
+import rosewoodImage from '../../assets/images/rosewood.png';
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
@@ -115,7 +115,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 mt-20">
             <button 
               onClick={() => navigate('/contact')}
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-[#D89084] hover:bg-[#c27e72] text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
             >
               {t('hero.contactUs')}
             </button>
@@ -133,19 +133,19 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 mt-20">
             <button 
               onClick={() => navigate('/humans')}
-              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-[#D89084] hover:bg-[#c27e72] text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
             >
               {t('hero.humans')}
             </button>
             <button 
               onClick={() => navigate('/animals')}
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-[#D89084] hover:bg-[#c27e72] text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
             >
               {t('hero.animals')}
             </button>
             <button 
               onClick={() => navigate('/plants')}
-              className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-[#D89084] hover:bg-[#c27e72] text-white rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
             >
               {t('hero.plants')}
             </button>

@@ -60,6 +60,21 @@ export const resources = {
           }
         ]
       },
+      hydrogenBenefits: {
+        title: "Hydrogen Water",
+        subtitle: "Health Benefits",
+        description: "Hydrogen water is regular water that's been enhanced with molecular hydrogen gas, known as H2. Hydrogen is a tasteless, colorless, odorless gas that can combine with other elements, such as oxygen.",
+        athleticPerformance: {
+          title: "Improve Athletic Performance",
+          description: "Enhanced endurance and faster recovery for athletes."
+        },
+        metabolicHealth: {
+          title: "Improve Metabolic Health",
+          description: "Support healthy metabolism and energy production."
+        },
+        discoverButton: "Discover More",
+        callButton: "Call Anytime"
+      },
       westMacedonia: {
         title: 'The Power of Hydrogen in Western Macedonia',
         description: 'Western Macedonia has emerged as a leading region in the field of hydrogen in Greece, marking significant milestones in sustainable energy development.',
@@ -362,6 +377,21 @@ export const resources = {
             description: 'Το υδρογόνο φαίνεται να έχει προστατευτική επίδραση στο εγκέφαλο, πιθανώς βοηθώντας στην πρόληψη νευροδυτικών νόσων όπως το Alzheimer και το Parkinson.'
           }
         ]
+      },
+      hydrogenBenefits: {
+        title: "Νερό Υδρογόνου",
+        subtitle: "Οφέλη για την Υγεία",
+        description: "Το νερό υδρογόνου είναι κανονικό νερό που έχει εμπλουτιστεί με μοριακό αέριο υδρογόνο, γνωστό ως H2. Το υδρογόνο είναι ένα άγευστο, άχρωμο, άοσμο αέριο που μπορεί να συνδυαστεί με άλλα στοιχεία, όπως το οξυγόνο.",
+        athleticPerformance: {
+          title: "Βελτίωση Αθλητικής Απόδοσης",
+          description: "Ενισχυμένη αντοχή και ταχύτερη ανάρρωση για αθλητές."
+        },
+        metabolicHealth: {
+          title: "Βελτίωση Μεταβολικής Υγείας",
+          description: "Υποστήριξη υγιούς μεταβολισμού και παραγωγής ενέργειας."
+        },
+        discoverButton: "Μάθετε Περισσότερα",
+        callButton: "Καλέστε Οποιαδήποτε Ώρα"
       },
       westMacedonia: {
         title: 'Η Δύναμη του Υδρογόνου στη Δυτική Μακεδονία',

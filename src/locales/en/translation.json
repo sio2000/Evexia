@@ -114,26 +114,77 @@
     }
   },
   "certifications": {
-    "subtitle": "Pure Innovation",
+    "subtitle": "Quality Assurance",
     "title": "Why Choose Our Device?",
-    "description": "There are many Hydrogen Water Devices in the market. Make sure to choose a certified, reliable solution backed by science.",
+    "description": "Our hydrogen water devices are backed by rigorous testing, international certifications, and proven scientific research. Choose a solution you can trust.",
     "items": [
       {
         "title": "Safety Certified",
-        "description": "Meets international safety standards for water treatment devices"
+        "description": "Meets international safety standards and regulations for water treatment devices"
       },
       {
         "title": "Quality Tested",
-        "description": "Regular quality control and performance testing"
+        "description": "Regular quality control and performance testing by independent laboratories"
       },
       {
         "title": "Award Winning",
-        "description": "Recognized for innovation in water treatment technology"
+        "description": "Recognized for innovation in hydrogen-enriched water technology"
       },
       {
-        "title": "Documented Results",
-        "description": "Backed by scientific research and clinical studies"
+        "title": "Research Backed",
+        "description": "Supported by scientific studies and clinical research papers"
       }
     ]
+  },
+  "hydrogenBenefits": {
+    "title": "Hydrogen Water",
+    "subtitle": "Health Benefits",
+    "description": "Hydrogen water is regular water that's been enhanced with molecular hydrogen gas, known as H2. Hydrogen is a tasteless, colorless, odorless gas that can combine with other elements, such as oxygen.",
+    "athleticPerformance": {
+      "title": "Improve Athletic Performance",
+      "description": "Enhanced endurance and faster recovery for athletes."
+    },
+    "metabolicHealth": {
+      "title": "Improve Metabolic Health",
+      "description": "Support healthy metabolism and energy production."
+    },
+    "discoverButton": "Discover More",
+    "callButton": "Call Anytime"
+  },
+  "transportation": {
+    "mainTitle": "Energizing Well-being: The Role of Hydrogen in Physical and Mental Wellness",
+    "mainDescription": "A new approach to hydrogen use brings to light its multiple benefits—not only for the environment but also for human physical and mental health.",
+    "features": [],
+    "conclusion": "Hydrogen is not just fuel for transportation — it's fuel for a healthier, more balanced life."
+  },
+  "about": {
+    "title": "10000BC - ESHOPU",
+    "subtitle": "See our Biological, Biodynamic Products",
+    "features": {
+      "biological": {
+        "title": "Biological",
+        "description": "100% natural and organic products for your well-being"
+      },
+      "biodynamic": {
+        "title": "Biodynamic",
+        "description": "Harvested following natural cycles for maximum potency"
+      },
+      "sustainable": {
+        "title": "Sustainable",
+        "description": "Environmentally conscious production methods"
+      }
+    },
+    "readMore": "Read More"
+  },
+  "nav": {
+    "home": "Home",
+    "hydrogenLife": "Hydrogen Life",
+    "hydrogenWater": "Hydrogen Water",
+    "humans": "Humans",
+    "animals": "Animals",
+    "plants": "Plants",
+    "products": "Products",
+    "shop": "Shop",
+    "contact": "Contact"
   }
 } 
