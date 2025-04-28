@@ -80,13 +80,7 @@ const Navbar = () => {
                 </div>
               </Menu.Items>
             </Menu>
-<<<<<<< HEAD
             <Link to="/1000bc" className="text-gray-700 hover:text-sky-600">1000BC</Link>
-=======
-
-            <Link to="/1000bc" className="text-gray-700 hover:text-sky-600">1000BC</Link>
-
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
             <Link to="/products" className="text-gray-700 hover:text-sky-600">{t('nav.products')}</Link>
             <Link to="/contact" className="text-gray-700 hover:text-sky-600">{t('nav.contact')}</Link>
           </div>
