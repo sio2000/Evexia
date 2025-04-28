@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShoppingCart, User, Globe } from 'lucide-react';
 import { Menu } from '@headlessui/react';
 import { useTranslation } from 'react-i18next';
+import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +18,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-sky-600">Hydrogenlife</Link>
+            <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+            <Link to="/" className="text-2xl font-bold text-sky-600">Hydrogen Developments</Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -81,6 +83,7 @@ const Navbar = () => {
               </Menu.Items>
             </Menu>
             <Link to="/1000bc" className="text-gray-700 hover:text-sky-600">1000BC</Link>
+            <a href="https://quantumwellness.gr" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-sky-600">quantumwellness</a>
             <Link to="/products" className="text-gray-700 hover:text-sky-600">{t('nav.products')}</Link>
             <Link to="/contact" className="text-gray-700 hover:text-sky-600">{t('nav.contact')}</Link>
           </div>

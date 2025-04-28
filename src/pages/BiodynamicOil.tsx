@@ -1,9 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-<<<<<<< HEAD
 import backgroundFon from '../../assets/images/fon.png';
-=======
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
 
 const BiodynamicOilPage = () => {
   const { t } = useTranslation();
@@ -16,11 +13,7 @@ const BiodynamicOilPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-<<<<<<< HEAD
             backgroundImage: `url(${backgroundFon})`
-=======
-            backgroundImage: `url('https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?q=80&w=2069&auto=format&fit=crop')`
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
           }}
         >
           {/* Dark Overlay */}

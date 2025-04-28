@@ -24,11 +24,7 @@ const BiologicalOliveOilPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-<<<<<<< HEAD
             backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80')`
-=======
-            backgroundImage: `url('https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?q=80&w=2069&auto=format&fit=crop')`
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
           }}
         >
           {/* Dark Overlay */}
@@ -61,7 +57,6 @@ const BiologicalOliveOilPage = () => {
               variants={fadeInUp}
             >
               <h2 className="text-4xl font-playfair text-[#2B5173] mb-6">
-<<<<<<< HEAD
                 {t('biologicalOliveOil.sections.intro.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -69,15 +64,6 @@ const BiologicalOliveOilPage = () => {
               </p>
               <p className="text-gray-600">
                 {t('biologicalOliveOil.sections.intro.description')}
-=======
-                Biodynamic, biological Olive Oil!
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                The first biodynamic, organic olive oil in Greece, with Demeter certification
-              </p>
-              <p className="text-gray-600">
-                An excellent olive oil originating in Crete. The olives and bushes are cultivated according to the principles of Biodynamic agriculture and coexist with the wild vegetation. Certified by Dio (Biological EVOO – Greece) and Demeter (Biodynamic EVOO – Germany).
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
               </p>
             </motion.div>
             <motion.div 
@@ -107,17 +93,10 @@ const BiologicalOliveOilPage = () => {
               variants={fadeInUp}
             >
               <h2 className="text-4xl font-playfair text-[#2B5173] mb-6">
-<<<<<<< HEAD
                 {t('biologicalOliveOil.sections.farming.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 {t('biologicalOliveOil.sections.farming.description')}
-=======
-                What is Biodynamic Farming?
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Biodynamic farming is a method of organic farming originally developed by Rudolf Steiner that uses what proponents describe as "a holistic understanding of agricultural processes." One of the first sustainable agriculture movements, it treats soil fertility, plant growth and animal care as ecologically interrelated tasks.
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
               </p>
             </motion.div>
             <motion.div 
@@ -147,17 +126,10 @@ const BiologicalOliveOilPage = () => {
               variants={fadeInUp}
             >
               <h2 className="text-4xl font-playfair text-[#2B5173] mb-6">
-<<<<<<< HEAD
                 {t('biologicalOliveOil.sections.approach.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 {t('biologicalOliveOil.sections.approach.description')}
-=======
-                Our Organic Approach
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Biodynamics has much in common with other organic approaches – it emphasizes the use of manure and compost and excludes the use of artificial chemicals in soil and plants. Methods unique to the biodynamic approach include treating animals, crops, and soil as a single system.
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
               </p>
             </motion.div>
             <motion.div 
@@ -187,17 +159,10 @@ const BiologicalOliveOilPage = () => {
               variants={fadeInUp}
             >
               <h2 className="text-4xl font-playfair text-[#2B5173] mb-6">
-<<<<<<< HEAD
                 {t('biologicalOliveOil.sections.production.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 {t('biologicalOliveOil.sections.production.description')}
-=======
-                Local Production & Distribution
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Emphasis from its beginnings on local production and distribution systems; use of traditional and development of new local breeds and varieties; and the use of an astrological calendar of sowing and planting.
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
               </p>
             </motion.div>
             <motion.div 

@@ -208,7 +208,6 @@
         "liverStudy": "In studies of people with hepatitis B and nonalcoholic fatty liver disease, treatment with hydrogen water improved liver function and reduced the amount of fat stored in the liver."
       }
     }
-<<<<<<< HEAD
   },
   "contactPage": {
     "hero": {
@@ -254,7 +253,5 @@
       "title": "Find Us",
       "iframeTitle": "Our Location"
     }
-=======
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
   }
 } 

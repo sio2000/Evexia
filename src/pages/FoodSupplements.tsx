@@ -5,10 +5,7 @@ import s2Image from '/assets/images/s2.png';
 import s3Image from '/assets/images/s3.png';
 import s4Image from '/assets/images/s4.png';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
 
 const FoodSupplementsPage = () => {
   const { t } = useTranslation();
@@ -165,17 +162,10 @@ const FoodSupplementsPage = () => {
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               {t('foodSupplements.cta.description')}
             </p>
-<<<<<<< HEAD
             <Link to="/products" className="inline-flex items-center px-8 py-3 bg-[#E5B3B3] text-white font-medium rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
               {t('foodSupplements.cta.button')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-=======
-            <button className="inline-flex items-center px-8 py-3 bg-[#E5B3B3] text-white font-medium rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
-              {t('foodSupplements.cta.button')}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
->>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
           </div>
         </div>
       </div>
