@@ -22,8 +22,10 @@ import {
 } from 'lucide-react';
 import leavesImage from '../../assets/images/leaves.jpg';
 import plantingImage from '../../assets/images/planting.jpg';
+import { useTranslation } from 'react-i18next';
 
 const PlantsPage = () => {
+  const { t, i18n } = useTranslation();
   console.log('PlantsPage component rendering');
   
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -34,122 +36,20 @@ const PlantsPage = () => {
     setIsVisible(true);
   }, []);
 
-  const mainBenefits = [
-    {
-      icon: <Droplets className="h-12 w-12 text-green-600" />,
-      title: 'Hydration & Homeostasis',
-      description: 'Essential component making up 80-95% of plant cells, maintaining fluid balance and cellular function.'
-    },
-    {
-      icon: <Sun className="h-12 w-12 text-green-600" />,
-      title: 'Photosynthesis',
-      description: 'Crucial for converting sunlight into energy, splitting water molecules to produce oxygen and glucose.'
-    },
-    {
-      icon: <ArrowDownUp className="h-12 w-12 text-green-600" />,
-      title: 'Nutrient Transport',
-      description: 'Dissolves and transports essential nutrients and minerals throughout the plant system.'
-    },
-    {
-      icon: <Wind className="h-12 w-12 text-green-600" />,
-      title: 'Transpiration',
-      description: 'Regulates temperature and aids in water movement from roots to leaves through evaporation.'
-    },
-    {
-      icon: <Sprout className="h-12 w-12 text-green-600" />,
-      title: 'Growth & Development',
-      description: 'Essential for cell expansion and overall plant growth, from roots to leaves.'
-    },
-    {
-      icon: <Shield className="h-12 w-12 text-green-600" />,
-      title: 'Disease Prevention',
-      description: 'Supports plant immune system and helps flush out harmful pathogens.'
-    }
-  ];
+  const mainBenefits = t('plantsPage.mainBenefits', { returnObjects: true }) as { title: string; description: string }[];
+  const detailedSections = t('plantsPage.detailedSections', { returnObjects: true }) as { id: string; title: string; content: string[] }[];
+  const plantExamples = t('plantsPage.plantExamples', { returnObjects: true }) as { title: string; description: string }[];
+  const research = t('plantsPage.research', { returnObjects: true }) as { title: string; finding: string }[];
 
-  const detailedSections = [
-    {
-      id: 'cellular',
-      icon: <CircleDot className="h-8 w-8 text-green-600" />,
-      title: 'Cellular Structure',
-      content: [
-        'Makes up 80-95% of plant cell mass',
-        'Maintains turgor pressure',
-        'Supports cell wall integrity',
-        'Essential for cellular reactions'
-      ]
-    },
-    {
-      id: 'photosynthesis',
-      icon: <Zap className="h-8 w-8 text-green-600" />,
-      title: 'Photosynthesis Process',
-      content: [
-        'Splits water molecules for energy',
-        'Produces oxygen as byproduct',
-        'Creates glucose for plant energy',
-        'Powers plant metabolism'
-      ]
-    },
-    {
-      id: 'temperature',
-      icon: <Thermometer className="h-8 w-8 text-green-600" />,
-      title: 'Temperature Control',
-      content: [
-        'Regulates internal temperature',
-        'Prevents overheating through transpiration',
-        'Absorbs heat during day',
-        'Releases heat at night'
-      ]
-    },
-    {
-      id: 'adaptation',
-      icon: <Globe className="h-8 w-8 text-green-600" />,
-      title: 'Environmental Adaptation',
-      content: [
-        'Enables drought resistance',
-        'Supports specialized storage',
-        'Allows for climate adaptation',
-        'Maintains survival mechanisms'
-      ]
-    }
+  const mainBenefitsIcons = [
+    <Droplets className="h-12 w-12 text-green-600" />, <Sun className="h-12 w-12 text-green-600" />, <ArrowDownUp className="h-12 w-12 text-green-600" />,
+    <Wind className="h-12 w-12 text-green-600" />, <Sprout className="h-12 w-12 text-green-600" />, <Shield className="h-12 w-12 text-green-600" />
   ];
-
-  const plantExamples = [
-    {
-      icon: <Mountain className="h-10 w-10 text-green-600" />,
-      title: 'Desert Plants',
-      description: 'Cacti and succulents store water in stems and leaves, with specialized adaptations for arid conditions.'
-    },
-    {
-      icon: <Flower2 className="h-10 w-10 text-green-600" />,
-      title: 'Water Lilies',
-      description: 'Aquatic plants with specialized tissues for oxygen transport in waterlogged environments.'
-    },
-    {
-      icon: <TreePine className="h-10 w-10 text-green-600" />,
-      title: 'Forest Plants',
-      description: 'Deep root systems and efficient water transport mechanisms for survival in varied conditions.'
-    },
-    {
-      icon: <Leaf className="h-10 w-10 text-green-600" />,
-      title: 'Tropical Plants',
-      description: 'Adapted to high humidity with specialized leaf structures for efficient water management.'
-    }
+  const detailedSectionsIcons = [
+    <CircleDot className="h-8 w-8 text-green-600" />, <Zap className="h-8 w-8 text-green-600" />, <Thermometer className="h-8 w-8 text-green-600" />, <Globe className="h-8 w-8 text-green-600" />
   ];
-
-  const research = [
-    {
-      title: 'Cellular Structure',
-      finding: 'Water comprises 80-95% of plant cell mass, essential for maintaining cellular integrity.'
-    },
-    {
-      title: 'Photosynthesis',
-      finding: 'Water molecules are split during photosynthesis to produce oxygen and energy-rich glucose.'
-    },
-    {
-      title: 'Adaptation',
-      finding: 'Plants have evolved diverse mechanisms for water conservation and efficient usage.'
-    }
+  const plantExamplesIcons = [
+    <Mountain className="h-10 w-10 text-green-600" />, <Flower2 className="h-10 w-10 text-green-600" />, <TreePine className="h-10 w-10 text-green-600" />, <Leaf className="h-10 w-10 text-green-600" />
   ];
 
   return (
@@ -159,18 +59,14 @@ const PlantsPage = () => {
         <div className="absolute inset-0">
           <img
             src={plantingImage}
-            alt="Plants growing in nature"
+            alt={t('plantsPage.heroImageAlt')}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-green-900/60"></div>
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Water: The Lifeblood of Plants
-          </h1>
-          <p className={`text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Discover how water (H₂O) orchestrates the intricate dance of life in the plant kingdom through its remarkable properties.
-          </p>
+          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('plantsPage.heroTitle')}</h1>
+          <p className={`text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('plantsPage.heroSubtitle')}</p>
           <ArrowDown className={`h-10 w-10 text-white mx-auto animate-bounce transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100' : 'opacity-0'}`} />
         </div>
       </div>
@@ -180,25 +76,22 @@ const PlantsPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              The Vital Role of Water in Plant Life
+              {t('plantsPage.introTitle')}
             </h2>
             <p className="text-gray-600 mb-6">
-              Water is the cornerstone of plant life, orchestrating every aspect of growth and survival.
-              From the smallest moss to the mightiest redwood, water flows through the veins of all
-              plant life, enabling the miracle of photosynthesis and sustaining life on Earth.
+              {t('plantsPage.introDescription')}
             </p>
             <div className="bg-green-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Did You Know?</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('plantsPage.didYouKnow')}</h3>
               <p className="text-gray-600">
-                A single large tree can transpire up to 100 gallons of water per day, contributing
-                to local humidity and creating its own microclimate.
+                {t('plantsPage.didYouKnowText')}
               </p>
             </div>
           </div>
           <div className="relative">
             <img
               src={leavesImage}
-              alt="Green leaves with water drops"
+              alt={t('plantsPage.leavesImageAlt')}
               className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4">
@@ -216,7 +109,7 @@ const PlantsPage = () => {
             >
               <div className="flex justify-center mb-4">
                 <div className="transform group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
+                  {mainBenefitsIcons[index]}
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
@@ -232,22 +125,22 @@ const PlantsPage = () => {
         {/* Image Gallery Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Water in Plant Life
+            {t('plantsPage.galleryTitle')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <img
               src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e"
-              alt="Plant transpiration"
+              alt={t('plantsPage.galleryAlt1')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
-              alt="Forest ecosystem"
+              alt={t('plantsPage.galleryAlt2')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"
-              alt="Sunlight through leaves"
+              alt={t('plantsPage.galleryAlt3')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
           </div>
@@ -255,14 +148,14 @@ const PlantsPage = () => {
 
         {/* Detailed Sections */}
         <div className="space-y-6 mb-16">
-          {detailedSections.map((section) => (
+          {detailedSections.map((section, idx) => (
             <div key={section.id} className="bg-white rounded-xl shadow-md overflow-hidden">
               <button
                 className="w-full px-6 py-4 flex items-center justify-between hover:bg-green-50 transition-colors duration-300"
                 onClick={() => setActiveSection(activeSection === section.id ? null : section.id)}
               >
                 <div className="flex items-center space-x-3">
-                  {section.icon}
+                  {detailedSectionsIcons[idx]}
                   <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
                 </div>
                 {activeSection === section.id ? (
@@ -294,19 +187,19 @@ const PlantsPage = () => {
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1530968464165-7a1861cbaf9f"
-              alt="Plant diversity"
+              alt={t('plantsPage.plantGalleryAlt')}
               className="w-full h-full object-cover opacity-10"
             />
           </div>
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Plant Adaptations
+              {t('plantsPage.plantExamplesTitle')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {plantExamples.map((plant, index) => (
                 <div key={index} className="text-center transform hover:scale-105 transition-transform duration-300">
                   <div className="flex justify-center mb-4">
-                    {plant.icon}
+                    {plantExamplesIcons[index]}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {plant.title}
@@ -324,7 +217,7 @@ const PlantsPage = () => {
         <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg">
           <div className="flex items-center justify-center mb-6">
             <Microscope className="h-12 w-12 text-green-600 mr-4" />
-            <h2 className="text-3xl font-bold text-gray-900">Research Insights</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{t('plantsPage.researchTitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {research.map((study, index) => (
@@ -348,11 +241,9 @@ const PlantsPage = () => {
         <div className="mt-16 bg-yellow-50 rounded-xl p-6 flex items-start">
           <Shield className="h-6 w-6 text-yellow-600 mr-3 flex-shrink-0 mt-1 animate-pulse" />
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Water Stress Warning</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('plantsPage.warningTitle')}</h3>
             <p className="text-gray-600">
-              Water stress can severely impact plant health and survival. Signs include wilting,
-              yellowing leaves, stunted growth, and reduced flowering. Ensure proper watering
-              schedules and drainage to maintain optimal plant health.
+              {t('plantsPage.warningText')}
             </p>
           </div>
         </div>

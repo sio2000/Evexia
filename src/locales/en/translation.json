@@ -186,5 +186,72 @@
     "products": "Products",
     "shop": "Shop",
     "contact": "Contact"
+  },
+  "hydrogenWaterPage": {
+    "title": "Hydrogen Water",
+    "subtitle": "Discover the Power of Molecular Hydrogen",
+    "researchMessage": {
+      "title": "Scientific Research & Development",
+      "description": "Our ongoing research in molecular hydrogen technology continues to reveal promising results. Scientific studies indicate significant potential benefits for overall wellness and specific health conditions. We remain committed to advancing our understanding through rigorous clinical trials and evidence-based research.",
+      "highlights": [
+        "Evidence-based research",
+        "Clinical trials",
+        "Continuous innovation",
+        "Quality assurance"
+      ]
+    },
+    "nutritionSection": {
+      "title": "Hydrogen Water Nutrition Information",
+      "content": {
+        "minerals": "The mineral and vitamin content of hydrogen water will vary, depending on the provider and where the water is sourced from. Some manufacturers infuse water with trace amounts of following vitamins and minerals:",
+        "sameAsWater": "Hydrogen water has the same nutrition information as water.",
+        "liverStudy": "In studies of people with hepatitis B and nonalcoholic fatty liver disease, treatment with hydrogen water improved liver function and reduced the amount of fat stored in the liver."
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Connect with our team of hydrogen experts and discover how we can help you"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "We'd love to hear from you. Use the contact information below or fill out the form to reach us.",
+      "workingHours": {
+        "title": "Working Hours",
+        "monday": "Monday: 8:00 to 16:00",
+        "tueFri": "Tuesday to Friday: 8:00 to 16:00"
+      },
+      "phone": {
+        "title": "Phone",
+        "cta": "Click to call"
+      },
+      "email": {
+        "title": "Email",
+        "cta": "Click to send"
+      },
+      "address": {
+        "title": "Address"
+      },
+      "social": {
+        "title": "Follow Us"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is your message about?",
+      "message": "Your Message",
+      "messagePlaceholder": "Type your message here...",
+      "send": "Send Message"
+    },
+    "map": {
+      "title": "Find Us",
+      "iframeTitle": "Our Location"
+    }
   }
 } 

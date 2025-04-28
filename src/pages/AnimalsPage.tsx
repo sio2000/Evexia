@@ -23,8 +23,10 @@ import {
   Activity
 } from 'lucide-react';
 import beeImage from '../../assets/images/bee.jpg';
+import { useTranslation } from 'react-i18next';
 
 const AnimalsPage = () => {
+  const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,133 +34,21 @@ const AnimalsPage = () => {
     setIsVisible(true);
   }, []);
 
-  const mainBenefits = [
-    {
-      icon: <Droplets className="h-12 w-12 text-blue-600" />,
-      title: 'Hydration & Homeostasis',
-      description: 'Essential component making up 60-80% of animal bodies, maintaining fluid balance and cellular function.'
-    },
-    {
-      icon: <Thermometer className="h-12 w-12 text-blue-600" />,
-      title: 'Temperature Regulation',
-      description: 'Crucial for body temperature control through sweating and breathing mechanisms.'
-    },
-    {
-      icon: <Beaker className="h-12 w-12 text-blue-600" />,
-      title: 'Universal Solvent',
-      description: 'Dissolves vital nutrients, vitamins, and minerals for transport throughout the body.'
-    },
-    {
-      icon: <ArrowDownUp className="h-12 w-12 text-blue-600" />,
-      title: 'Substance Transport',
-      description: 'Facilitates blood circulation and transport of oxygen, nutrients, and waste products.'
-    },
-    {
-      icon: <Trash2 className="h-12 w-12 text-blue-600" />,
-      title: 'Toxin Elimination',
-      description: 'Supports kidney and liver function in removing waste and toxic substances.'
-    },
-    {
-      icon: <Apple className="h-12 w-12 text-blue-600" />,
-      title: 'Digestive Health',
-      description: 'Essential for digestion, nutrient absorption, and proper bowel function.'
-    }
-  ];
+  const mainBenefits = t('animalsPage.mainBenefits', { returnObjects: true }) as { title: string; description: string; icon?: JSX.Element }[];
+  const detailedSections = t('animalsPage.detailedSections', { returnObjects: true }) as { id: string; title: string; content: string[]; icon?: JSX.Element }[];
+  const speciesExamples = t('animalsPage.speciesExamples', { returnObjects: true }) as { title: string; description: string; icon?: JSX.Element }[];
+  const research = t('animalsPage.research', { returnObjects: true }) as { title: string; finding: string }[];
 
-  const detailedSections = [
-    {
-      id: 'cellular',
-      icon: <Dna className="h-8 w-8 text-blue-600" />,
-      title: 'Water as a Building Block',
-      content: [
-        '75% of intracellular fluid is water',
-        '25% exists in interstitial and extracellular fluid',
-        'Provides structural stability to tissues',
-        'Essential for cytoplasm composition'
-      ]
-    },
-    {
-      id: 'nervous',
-      icon: <Brain className="h-8 w-8 text-blue-600" />,
-      title: 'Brain & Nervous System',
-      content: [
-        'Ensures proper nerve signal conduction',
-        'Supports cerebrospinal fluid function',
-        'Prevents cognitive dysfunction',
-        'Maintains optimal reflexes'
-      ]
-    },
-    {
-      id: 'circulatory',
-      icon: <Heart className="h-8 w-8 text-blue-600" />,
-      title: 'Circulatory System',
-      content: [
-        'Blood plasma is 90% water',
-        'Maintains proper blood viscosity',
-        'Regulates blood pressure',
-        'Supports heart function'
-      ]
-    },
-    {
-      id: 'respiratory',
-      icon: <Wind className="h-8 w-8 text-blue-600" />,
-      title: 'Respiratory System',
-      content: [
-        'Keeps lung surfaces moist',
-        'Enables oxygen/CO2 exchange',
-        'Supports breathing function',
-        'Aids in temperature regulation'
-      ]
-    },
-    {
-      id: 'skeletal',
-      icon: <Bone className="h-8 w-8 text-blue-600" />,
-      title: 'Skeletal & Muscular System',
-      content: [
-        'Provides joint lubrication',
-        'Prevents bone friction',
-        'Supports muscle function',
-        'Prevents muscle cramps'
-      ]
-    }
+  const mainBenefitsIcons = [
+    <Droplets className="h-12 w-12 text-blue-600" />, <Thermometer className="h-12 w-12 text-blue-600" />, <Beaker className="h-12 w-12 text-blue-600" />,
+    <ArrowDownUp className="h-12 w-12 text-blue-600" />, <Trash2 className="h-12 w-12 text-blue-600" />, <Apple className="h-12 w-12 text-blue-600" />
   ];
-
-  const speciesExamples = [
-    {
-      icon: <Dog className="h-10 w-10 text-blue-600" />,
-      title: 'Dogs & Cats',
-      description: 'Need clean water daily to prevent urinary problems and maintain optimal health.'
-    },
-    {
-      icon: <Scale className="h-10 w-10 text-blue-600" />,
-      title: 'Livestock',
-      description: 'Water intake directly affects milk production and overall performance.'
-    },
-    {
-      icon: <Baby className="h-10 w-10 text-blue-600" />,
-      title: 'Birds',
-      description: 'Extremely sensitive to dehydration due to their small body size and fast metabolism.'
-    },
-    {
-      icon: <Activity className="h-10 w-10 text-blue-600" />,
-      title: 'Desert Animals',
-      description: 'Special adaptations for water conservation and efficient water use.'
-    }
+  const detailedSectionsIcons = [
+    <Dna className="h-8 w-8 text-blue-600" />, <Brain className="h-8 w-8 text-blue-600" />, <Heart className="h-8 w-8 text-blue-600" />,
+    <Wind className="h-8 w-8 text-blue-600" />, <Bone className="h-8 w-8 text-blue-600" />
   ];
-
-  const research = [
-    {
-      title: 'Cellular Hydration',
-      finding: 'Water comprises 60-80% of animal body weight, essential for cellular function.'
-    },
-    {
-      title: 'Thermoregulation',
-      finding: 'Critical role in maintaining body temperature through evaporative cooling.'
-    },
-    {
-      title: 'Metabolic Function',
-      finding: 'Vital for all biochemical reactions and energy production in animals.'
-    }
+  const speciesExamplesIcons = [
+    <Dog className="h-10 w-10 text-blue-600" />, <Scale className="h-10 w-10 text-blue-600" />, <Baby className="h-10 w-10 text-blue-600" />, <Activity className="h-10 w-10 text-blue-600" />
   ];
 
   return (
@@ -168,46 +58,38 @@ const AnimalsPage = () => {
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
-            alt="Animals drinking water"
+            alt={t('animalsPage.heroImageAlt')}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-blue-900/70"></div>
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Water: The Essence of Animal Life
-          </h1>
-          <p className={`text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Discover how water (H₂O) plays a crucial role in sustaining and nurturing animal life through its remarkable properties.
-          </p>
+          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('animalsPage.heroTitle')}</h1>
+          <p className={`text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('animalsPage.heroSubtitle')}</p>
           <ArrowDown className={`h-10 w-10 text-white mx-auto animate-bounce transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100' : 'opacity-0'}`} />
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              The Power of Water in Animal Life
+              {t('animalsPage.introTitle')}
             </h2>
             <p className="text-gray-600 mb-6">
-              Water is the foundation of all animal life, making up the majority of their body composition
-              and playing a vital role in every biological process. From the smallest insects to the
-              largest mammals, water is essential for survival and optimal function.
+              {t('animalsPage.introDescription')}
             </p>
             <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Did You Know?</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('animalsPage.didYouKnow')}</h3>
               <p className="text-gray-600">
-                Some desert animals have evolved remarkable adaptations to conserve water, allowing
-                them to survive in extreme conditions with minimal water intake.
+                {t('animalsPage.didYouKnowText')}
               </p>
             </div>
           </div>
           <div className="relative">
             <img
               src={beeImage}
-              alt="Bee drinking water"
+              alt={t('animalsPage.beeImageAlt')}
               className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4">
@@ -215,7 +97,6 @@ const AnimalsPage = () => {
             </div>
           </div>
         </div>
-
         {/* Main Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {mainBenefits.map((benefit, index) => (
@@ -225,7 +106,7 @@ const AnimalsPage = () => {
             >
               <div className="flex justify-center mb-4">
                 <div className="transform group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
+                  {mainBenefitsIcons[index]}
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
@@ -237,41 +118,39 @@ const AnimalsPage = () => {
             </div>
           ))}
         </div>
-
         {/* Image Gallery Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Water in Nature
+            {t('animalsPage.galleryTitle')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <img
               src="https://images.unsplash.com/photo-1547721064-da6cfb341d50"
-              alt="Wildlife at water source"
+              alt={t('animalsPage.galleryAlt1')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1484406566174-9da000fda645"
-              alt="Animal hydration"
+              alt={t('animalsPage.galleryAlt2')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1579168765467-3b235f938439"
-              alt="Water ecosystem"
+              alt={t('animalsPage.galleryAlt3')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
           </div>
         </div>
-
         {/* Detailed Sections */}
         <div className="space-y-6 mb-16">
-          {detailedSections.map((section) => (
+          {detailedSections.map((section, idx) => (
             <div key={section.id} className="bg-white rounded-xl shadow-md overflow-hidden">
               <button
                 className="w-full px-6 py-4 flex items-center justify-between hover:bg-blue-50 transition-colors duration-300"
                 onClick={() => setActiveSection(activeSection === section.id ? null : section.id)}
               >
                 <div className="flex items-center space-x-3">
-                  {section.icon}
+                  {detailedSectionsIcons[idx]}
                   <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
                 </div>
                 {activeSection === section.id ? (
@@ -297,25 +176,24 @@ const AnimalsPage = () => {
             </div>
           ))}
         </div>
-
         {/* Species Examples Section */}
         <div className="relative bg-white rounded-2xl shadow-md p-8 mb-16 overflow-hidden">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1500479694472-551d1fb6258d"
-              alt="Natural habitat"
+              alt={t('animalsPage.speciesGalleryAlt')}
               className="w-full h-full object-cover opacity-10"
             />
           </div>
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Species-Specific Water Needs
+              {t('animalsPage.speciesTitle')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {speciesExamples.map((species, index) => (
                 <div key={index} className="text-center transform hover:scale-105 transition-transform duration-300">
                   <div className="flex justify-center mb-4">
-                    {species.icon}
+                    {speciesExamplesIcons[index]}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {species.title}
@@ -328,12 +206,11 @@ const AnimalsPage = () => {
             </div>
           </div>
         </div>
-
         {/* Research Section */}
         <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg">
           <div className="flex items-center justify-center mb-6">
             <Microscope className="h-12 w-12 text-blue-600 mr-4" />
-            <h2 className="text-3xl font-bold text-gray-900">Research Insights</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{t('animalsPage.researchTitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {research.map((study, index) => (
@@ -352,16 +229,13 @@ const AnimalsPage = () => {
             ))}
           </div>
         </div>
-
         {/* Warning Section */}
         <div className="mt-16 bg-red-50 rounded-xl p-6 flex items-start">
           <Shield className="h-6 w-6 text-red-600 mr-3 flex-shrink-0 mt-1 animate-pulse" />
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Dehydration Warning</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('animalsPage.warningTitle')}</h3>
             <p className="text-gray-600">
-              Dehydration can be life-threatening for animals. Signs include reduced activity,
-              dry mouth, sunken eyes, and decreased skin elasticity. Always ensure animals have
-              access to clean, fresh water, especially during hot weather or illness.
+              {t('animalsPage.warningText')}
             </p>
           </div>
         </div>

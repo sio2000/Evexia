@@ -26,8 +26,10 @@ import useHydrogenImage from '../../assets/images/UseHydrogen.jpg';
 import hydrogenLab from '../../assets/images/hydrogen-lab.jpg';
 import hydrogenMolecules from '../../assets/images/hydrogen-molecules.jpg';
 import hydrogenTherapy from '../../assets/images/hydrogen-therapy.jpg';
+import { useTranslation } from 'react-i18next';
 
 const HumansPage = () => {
+  const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,137 +37,21 @@ const HumansPage = () => {
     setIsVisible(true);
   }, []);
 
-  const mainBenefits = [
-    {
-      icon: <Shield className="h-12 w-12 text-sky-600" />,
-      title: 'Strong Antioxidant Action',
-      description: 'Acts as a selective antioxidant, neutralizing toxic free radicals while preserving beneficial ones. Protects cells and DNA from oxidative stress.'
-    },
-    {
-      icon: <Activity className="h-12 w-12 text-sky-600" />,
-      title: 'Anti-inflammatory Action',
-      description: 'Reduces inflammation throughout the body, beneficial for arthritis, neurodegenerative diseases, and cardiovascular conditions.'
-    },
-    {
-      icon: <Battery className="h-12 w-12 text-sky-600" />,
-      title: 'Energy & Performance',
-      description: 'Increases energy levels and reduces fatigue through enhanced cellular function and reduced oxidative stress.'
-    },
-    {
-      icon: <Brain className="h-12 w-12 text-sky-600" />,
-      title: 'Neuroprotective Action',
-      description: 'Protects nerve cells in cases of stroke, injuries, or neurological diseases while reducing brain inflammation.'
-    },
-    {
-      icon: <Heart className="h-12 w-12 text-sky-600" />,
-      title: 'Organ Protection',
-      description: 'Provides protective action for vital organs like the liver and kidneys, especially in cases of toxicity.'
-    },
-    {
-      icon: <Scale className="h-12 w-12 text-sky-600" />,
-      title: 'Metabolic Support',
-      description: 'Helps regulate blood sugar levels, cholesterol, and weight management through improved metabolic function.'
-    }
-  ];
+  const mainBenefits = t('humansPage.mainBenefits', { returnObjects: true }) as { title: string; description: string; icon?: JSX.Element }[];
+  const detailedSections = t('humansPage.detailedSections', { returnObjects: true }) as { title: string; content: string[]; icon?: JSX.Element }[];
+  const applicationMethods = t('humansPage.applicationMethods', { returnObjects: true }) as { title: string; description: string; icon?: JSX.Element }[];
+  const research = t('humansPage.research', { returnObjects: true }) as { authors: string; year: string; journal?: string; finding: string }[];
 
-  const detailedSections = [
-    {
-      id: 'brain',
-      icon: <Brain className="h-8 w-8 text-sky-600" />,
-      title: 'Brain Health & Psychology',
-      content: [
-        'Enhancement of cognitive functions including memory and focus',
-        'Prevention of neurodegenerative diseases like Alzheimer\'s and Parkinson\'s',
-        'Treatment of depression and anxiety through cortisol reduction',
-        'Improved cognitive flexibility in stressful environments'
-      ]
-    },
-    {
-      id: 'heart',
-      icon: <Heart className="h-8 w-8 text-sky-600" />,
-      title: 'Cardiovascular Health',
-      content: [
-        'Improvement of blood circulation through enhanced endothelial cell function',
-        'Reduction of heart attack risk through anti-inflammatory action',
-        'Blood pressure regulation',
-        'Protection against ischemic events'
-      ]
-    },
-    {
-      id: 'metabolism',
-      icon: <Activity className="h-8 w-8 text-sky-600" />,
-      title: 'Metabolism & Energy',
-      content: [
-        'Improved insulin sensitivity for diabetes management',
-        'Support for weight loss and fat metabolism',
-        'Enhanced energy levels during exercise',
-        'Better metabolic syndrome prevention'
-      ]
-    },
-    {
-      id: 'aging',
-      icon: <Dna className="h-8 w-8 text-sky-600" />,
-      title: 'Cellular Health & Aging',
-      content: [
-        'Protection of mitochondria and cellular repair',
-        'Delay of biological aging processes',
-        'Maintenance of cellular vitality',
-        'Reduction of oxidative damage'
-      ]
-    },
-    {
-      id: 'immunity',
-      icon: <Shield className="h-8 w-8 text-sky-600" />,
-      title: 'Immunity & Development',
-      content: [
-        'Enhanced immune system function',
-        'Better defense against viruses and bacteria',
-        'Regulation of autoimmune responses',
-        'Support for overall development'
-      ]
-    }
+  const mainBenefitsIcons = [
+    <Shield className="h-12 w-12 text-sky-600" />, <Activity className="h-12 w-12 text-sky-600" />, <Battery className="h-12 w-12 text-sky-600" />,
+    <Brain className="h-12 w-12 text-sky-600" />, <Heart className="h-12 w-12 text-sky-600" />, <Scale className="h-12 w-12 text-sky-600" />
   ];
-
-  const applicationMethods = [
-    {
-      icon: <Droplets className="h-10 w-10 text-sky-600" />,
-      title: 'Hydrogen-enriched Water',
-      description: 'The most common method using special hydrogen generators. Easy cellular absorption and ideal for daily antioxidant protection.'
-    },
-    {
-      icon: <Wind className="h-10 w-10 text-sky-600" />,
-      title: 'Molecular Hydrogen Inhalation',
-      description: 'Specialized devices delivering H₂/O₂ mixture. Provides immediate action and higher bloodstream concentration.'
-    },
-    {
-      icon: <Pill className="h-10 w-10 text-sky-600" />,
-      title: 'Hydrogen Capsules',
-      description: 'Convenient tablets or capsules that release H₂. Perfect for travel or when devices aren\'t available.'
-    },
-    {
-      icon: <Bath className="h-10 w-10 text-sky-600" />,
-      title: 'Topical Applications',
-      description: 'Baths and face masks for local antioxidant and anti-aging effects through hydrogen-releasing products.'
-    }
+  const detailedSectionsIcons = [
+    <Brain className="h-8 w-8 text-sky-600" />, <Heart className="h-8 w-8 text-sky-600" />, <Activity className="h-8 w-8 text-sky-600" />,
+    <Dna className="h-8 w-8 text-sky-600" />, <Shield className="h-8 w-8 text-sky-600" />
   ];
-
-  const research = [
-    {
-      authors: 'Ohsawa et al.',
-      year: '2007',
-      journal: 'Nature Medicine',
-      finding: 'Demonstrated hydrogen\'s role as a selective antioxidant in stroke cases'
-    },
-    {
-      authors: 'Shirahata et al.',
-      year: '2010',
-      finding: 'Discovered positive effects in cell protection and metabolic regulation'
-    },
-    {
-      authors: 'Nakao et al.',
-      year: '2010',
-      finding: 'Showed improved liver function in hepatitis B patients using hydrogen water'
-    }
+  const applicationMethodsIcons = [
+    <Droplets className="h-10 w-10 text-sky-600" />, <Wind className="h-10 w-10 text-sky-600" />, <Pill className="h-10 w-10 text-sky-600" />, <Bath className="h-10 w-10 text-sky-600" />
   ];
 
   return (
@@ -181,13 +67,8 @@ const HumansPage = () => {
           <div className="absolute inset-0 bg-sky-900/70"></div>
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Hydrogen Benefits for Human Health
-          </h1>
-          <p className={`text-lg md:text-xl text-sky-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Discover how molecular hydrogen (H₂) can revolutionize human health through its unique
-            properties and wide-ranging therapeutic potential.
-          </p>
+          <h1 className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('humansPage.heroTitle')}</h1>
+          <p className={`text-lg md:text-xl text-sky-100 max-w-3xl mx-auto mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>{t('humansPage.heroSubtitle')}</p>
           <ArrowDown className={`h-10 w-10 text-white mx-auto animate-bounce transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100' : 'opacity-0'}`} />
         </div>
       </div>
@@ -197,18 +78,15 @@ const HumansPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              The Power of Molecular Hydrogen
+              {t('humansPage.introTitle')}
             </h2>
             <p className="text-gray-600 mb-6">
-              Molecular hydrogen (H₂) represents a groundbreaking advancement in health science.
-              As the smallest and most abundant molecule in the universe, it offers unique
-              therapeutic potential through its ability to rapidly diffuse into cells and tissues.
+              {t('humansPage.introDescription')}
             </p>
             <div className="bg-sky-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Did You Know?</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('humansPage.didYouKnow')}</h3>
               <p className="text-gray-600">
-                Hydrogen is the only antioxidant that can selectively target harmful free radicals
-                without affecting essential cellular signaling molecules.
+                {t('humansPage.didYouKnowText')}
               </p>
             </div>
           </div>
@@ -233,7 +111,7 @@ const HumansPage = () => {
             >
               <div className="flex justify-center mb-4">
                 <div className="transform group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
+                  {mainBenefitsIcons[index]}
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
@@ -249,22 +127,22 @@ const HumansPage = () => {
         {/* Image Gallery Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Hydrogen in Action
+            {t('humansPage.gallery.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <img
               src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e"
-              alt="Laboratory research with hydrogen"
+              alt={t('humansPage.gallery.alt1')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b"
-              alt="Hydrogen molecules visualization"
+              alt={t('humansPage.gallery.alt2')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1576086213369-97a306d36557"
-              alt="Hydrogen therapy application"
+              alt={t('humansPage.gallery.alt3')}
               className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover"
             />
           </div>
@@ -272,23 +150,23 @@ const HumansPage = () => {
 
         {/* Detailed Sections with Animation */}
         <div className="space-y-6 mb-16">
-          {detailedSections.map((section) => (
-            <div key={section.id} className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
+          {detailedSections.map((section, idx) => (
+            <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
               <button
                 className="w-full px-6 py-4 flex items-center justify-between hover:bg-sky-50 transition-colors duration-300"
-                onClick={() => setActiveSection(activeSection === section.id ? null : section.id)}
+                onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
               >
                 <div className="flex items-center space-x-3">
-                  {section.icon}
+                  {detailedSectionsIcons[idx]}
                   <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
                 </div>
-                {activeSection === section.id ? (
+                {activeSection === section.title ? (
                   <ChevronUp className="h-6 w-6 text-gray-400" />
                 ) : (
                   <ChevronDown className="h-6 w-6 text-gray-400" />
                 )}
               </button>
-              {activeSection === section.id && (
+              {activeSection === section.title && (
                 <div className="px-6 pb-4 animate-fadeIn">
                   <ul className="space-y-3">
                     {section.content.map((item, index) => (
@@ -317,13 +195,13 @@ const HumansPage = () => {
           </div>
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Ways to Use Hydrogen
+              {t('humansPage.applicationMethodsTitle')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applicationMethods.map((method, index) => (
                 <div key={index} className="text-center transform hover:scale-105 transition-transform duration-300">
                   <div className="flex justify-center mb-4">
-                    {method.icon}
+                    {applicationMethodsIcons[index]}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {method.title}
@@ -341,7 +219,7 @@ const HumansPage = () => {
         <div className="bg-gradient-to-br from-sky-50 to-white rounded-2xl p-8 shadow-lg">
           <div className="flex items-center justify-center mb-6">
             <Microscope className="h-12 w-12 text-sky-600 mr-4" />
-            <h2 className="text-3xl font-bold text-gray-900">Scientific Research</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{t('humansPage.researchTitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {research.map((study, index) => (
@@ -368,12 +246,9 @@ const HumansPage = () => {
         <div className="mt-16 bg-green-50 rounded-xl p-6 flex items-start transform hover:scale-[1.01] transition-transform duration-300">
           <Shield className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1 animate-pulse" />
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Safety Note</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('humansPage.safetyTitle')}</h3>
             <p className="text-gray-600">
-              Hydrogen is considered safe for use, even in high concentrations, as it is a natural
-              and non-toxic gas. While it can complement treatments and enhance prevention, it should
-              not replace prescribed medications. Ongoing research continues to reveal promising
-              results for specific conditions.
+              {t('humansPage.safetyDescription')}
             </p>
           </div>
         </div>

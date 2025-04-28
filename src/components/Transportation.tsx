@@ -59,9 +59,6 @@ const Transportation = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-[#4A5759]">{t('transportation.features.0.title')}</h3>
                   </div>
-                  <span className="text-sm font-semibold text-[#4A5759] bg-[#A7D7C5]/20 px-4 py-2 rounded-full">
-                    April 2025
-                  </span>
                 </div>
 
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">

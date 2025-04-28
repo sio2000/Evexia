@@ -3,7 +3,7 @@ import { ArrowRight, Leaf, Droplets, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import image1000bc from '/assets/images/1000bc.png';
-import image1000bc2 from '/assets/images/1000bc2.jpeg';
+import image1000bc2 from '/assets/images/1000bc2.png';
 import imageBC from '/assets/images/bc.jpeg';
 import imageBC2 from '/assets/images/bc2.jpeg';
 
@@ -22,10 +22,10 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#2C3E50] to-[#3498DB] mb-6">
-              10000BC - ESHOPU
+              {t('about.title')}
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-              See our Biological, Biodynamic Products
+              {t('about.subtitle')}
             </p>
             <div className="mt-6 w-24 h-1 bg-gradient-to-r from-[#D89084] to-[#E8B4B4] mx-auto rounded-full mb-12"></div>
 
@@ -34,24 +34,24 @@ const About = () => {
                 <div className="p-3 bg-[#D89084]/10 rounded-xl inline-block mb-4">
                   <Leaf className="h-8 w-8 text-[#D89084]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Biological</h3>
-                <p className="text-gray-600">100% natural and organic products for your well-being</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('about.features.biological.title')}</h3>
+                <p className="text-gray-600">{t('about.features.biological.description')}</p>
               </div>
 
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="p-3 bg-[#A7D7C5]/10 rounded-xl inline-block mb-4">
                   <Droplets className="h-8 w-8 text-[#A7D7C5]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Biodynamic</h3>
-                <p className="text-gray-600">Harvested following natural cycles for maximum potency</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('about.features.biodynamic.title')}</h3>
+                <p className="text-gray-600">{t('about.features.biodynamic.description')}</p>
               </div>
 
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="p-3 bg-[#F0B7A4]/10 rounded-xl inline-block mb-4">
                   <Sun className="h-8 w-8 text-[#F0B7A4]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sustainable</h3>
-                <p className="text-gray-600">Environmentally conscious production methods</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('about.features.sustainable.title')}</h3>
+                <p className="text-gray-600">{t('about.features.sustainable.description')}</p>
               </div>
             </div>
 
@@ -80,7 +80,7 @@ const About = () => {
                 to="/1000BC" 
                 className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#D89084] to-[#E8B4B4] text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group mx-12 text-lg"
               >
-                Read More
+                {t('about.readMore')}
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Link>
 

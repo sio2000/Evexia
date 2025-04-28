@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../../assets/images/waterfontana.jpeg';
+import backgroundImage from '../../assets/images/fon.png';
 import botImage from '../../assets/images/bot.jpg';
 import symbolImage from '../../assets/images/symbol.jpg';
-import rosewoodImage from '../../assets/images/rosewood.png';
+import rosewoodImage from '../../assets/images/rosewood.jpeg';
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
