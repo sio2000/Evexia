@@ -17,7 +17,11 @@ export const resources = {
         description: 'Discover the benefits of hydrogen water for a healthier life.'
       },
       hero: {
+<<<<<<< HEAD
         slide1Title: 'Power of Hydrogen & Nature',
+=======
+        slide1Title: 'BIODYNAMIC OIL',
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
         slide1Subtitle: 'Kouses Estate',
         slide1Button: 'Discover More',
         slide2Title: 'The Future of Energy is Hydrogen',
@@ -406,6 +410,7 @@ export const resources = {
           seeMore: "SEE MORE"
         },
         organicWine: {
+<<<<<<< HEAD
           title: "Organic & Biodynamic Wine",
           subtitle: "Tradition Meets Innovation",
           section: {
@@ -427,6 +432,28 @@ export const resources = {
             ],
             conclusion: "The result is wines that truly express their terroir and vintage, with remarkable purity and character.",
             imageAlt: "Biodynamic Vineyard"
+=======
+          subtitle: "ORGANIC-BIODYNAMIC",
+          title: "Organic Biodynamic Wine",
+          section: {
+            title: "ORGANIC & BIODYNAMIC WINES",
+            description: "Organic wine is wine produced from grapes grown according to the principles of organic farming, which usually excludes the use of artificial chemical fertilizers, pesticides, fungicides and herbicides.",
+            trend: "Organic and Biodynamic wines have been a big trend in the world vineyard for a few years now.",
+            biodynamic: "Biodynamic wines are wines based on the principles of organic cultivation, while applying a planting calendar that depends on astronomical configurations, as the earth is treated as a living and receptive organism.",
+            imageAlt: "Organic Wine Varieties"
+          },
+          biodynamicSection: {
+            title: "What is biodynamic winemaking?",
+            description: "Biodynamic winemaking takes a holistic approach to agriculture, based on following the course of the heavenly bodies (the moon, planets and stars). All biodynamic farming practices take place according to the lunar cycle, following the belief that certain days are better for certain farming tasks and rituals than others and that doing them at the right time yields better results.",
+            benefits: [
+              "Contributes to longevity",
+              "It reduces the risk of cardiovascular diseases",
+              "It prevents dementia",
+              "Contributes to well-being"
+            ],
+            conclusion: "Their philosophy follows the principle of the \"cycle of life\" and although it may sound a little outdated, some of the best and most famous winemakers in the world have followed it fanatically for centuries!",
+            imageAlt: "Biodynamic Wine Grapes"
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
           },
           benefitsSection: {
             title: "THE BENEFITS",
@@ -622,6 +649,7 @@ export const resources = {
         },
         discoverButton: "DISCOVER MORE"
       },
+<<<<<<< HEAD
       biodynamicOil: {
         hero: {
           title: 'BIODYNAMIC OIL',
@@ -658,6 +686,88 @@ export const resources = {
             title: 'Health Benefits',
             description: 'Studies have shown that regular consumption of high-quality olive oil can reduce the risk of chronic diseases and promote longevity.'
           }
+=======
+      biologicalOliveOil: {
+        hero: {
+          title: "Biological Olive Oil",
+          subtitle: "Experience the pure essence of nature in every drop"
+        },
+        sections: {
+          intro: {
+            title: "Biodynamic, biological Olive Oil!",
+            subtitle: "The first biodynamic, organic olive oil in Greece, with Demeter certification",
+            description: "An excellent olive oil originating in Crete. The olives and bushes are cultivated according to the principles of Biodynamic agriculture and coexist with the wild vegetation. Certified by Dio (Biological EVOO – Greece) and Demeter (Biodynamic EVOO – Germany)."
+          },
+          farming: {
+            title: "What is Biodynamic Farming?",
+            description: "Biodynamic farming is a method of organic farming originally developed by Rudolf Steiner that uses what proponents describe as \"a holistic understanding of agricultural processes.\" One of the first sustainable agriculture movements, it treats soil fertility, plant growth and animal care as ecologically interrelated tasks."
+          },
+          approach: {
+            title: "Our Organic Approach",
+            description: "Biodynamics has much in common with other organic approaches – it emphasizes the use of manure and compost and excludes the use of artificial chemicals in soil and plants. Methods unique to the biodynamic approach include treating animals, crops, and soil as a single system."
+          },
+          production: {
+            title: "Local Production & Distribution",
+            description: "Emphasis from its beginnings on local production and distribution systems; use of traditional and development of new local breeds and varieties; and the use of an astrological calendar of sowing and planting."
+          }
+        }
+      },
+      biodynamicOil: {
+        hero: {
+          title: "Biodynamic Oil Farming",
+          subtitle: "Traditional methods meet modern sustainability"
+        },
+        cultivation: {
+          title: "Biodynamic Olive Cultivation",
+          description: "The organic cultivation of the olive is based on methods of rejuvenating the soil of the olive grove, on the recycling of the by-products and other available organic materials and on the reproduction and protection of the environment. This method of olive production, in addition to producing an excellent quality olive oil, limits the contamination of the soil, water and air with agrochemicals and at the same time contributes to the preservation of the diversity of valuable plants and animals.",
+          highlight: "The first Biodynamic Olive Oil in Crete, certified with Demeter and Dio!"
+        },
+        benefits: {
+          title: "The Benefits",
+          description: "Olive oil is one of the first fatty substances used by the Mediterranean peoples both in nutrition and in medicine and cosmetology, as medicine and cosmetics. Today, due to its special beneficial and organoleptic characteristics and its contribution to the prevention of many diseases, it is of great interest to the scientific world, health professionals and consumers.",
+          stats: {
+            omega6: "Omega-6: 9.7%",
+            omega3: "Omega-3: 0.76%",
+            vitaminE: "Vitamin E: 72% of the RDA",
+            vitaminK: "Vitamin K: 75% of the RDA"
+          },
+          additional: "Olive oil is the only oil that comes from the whole fruit and not the seed. Olive oil is rich in oleic acid and other antioxidants, such as vitamin E and phenols."
+        },
+        moreBenefits: {
+          title: "MORE BENEFITS",
+          properties: {
+            title: "Properties",
+            description: "It has the ability to reduce LDL \"bad\" cholesterol in the blood and increase HDL \"good\", preventing atherosclerosis and the risk of developing coronary heart disease."
+          },
+          nutritionalValue: {
+            title: "Nutritional value",
+            description: "It benefits the gastrointestinal system, improves digestion & helps good bowel function."
+          },
+          healthBenefits: {
+            title: "Health Benefits",
+            description: "It contains phytochemicals capable of triggering the death of cancer cells and may help reduce the risk of various types of cancer."
+          }
+        },
+        benefitsSection: {
+          title: "THE BENEFITS",
+          benefits: [
+            {
+              number: "01",
+              title: "Contributes to longevity",
+              description: "A study has shown that occasional alcohol consumption can give you extra years of life."
+            },
+            {
+              number: "02",
+              title: "It reduces the risk of cardiovascular diseases",
+              description: "they increase levels of good cholesterol, which protects the heart by improving factors that affect blood clotting and reducing the risk of heart attacks and strokes."
+            },
+            {
+              number: "03",
+              title: "It prevents dementia",
+              description: "Moderate alcohol consumption reduces the risk of developing Alzheimer's and other forms of dementia by up to 23%, according to the findings of a study involving 365,000 people."
+            }
+          ]
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
         }
       },
       oilBenefitsSection: {
@@ -731,6 +841,7 @@ export const resources = {
           description: "Browse our complete range of natural food supplements designed to support your health and wellbeing.",
           button: "View All Products"
         }
+<<<<<<< HEAD
       },
       biologicalOliveOil: {
         hero: {
@@ -1268,6 +1379,8 @@ export const resources = {
         filterHydrogen: "Hydrogen Products",
         filterOrganic: "Organic Products",
         filterWine: "Wine"
+=======
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
       }
     }
   },
@@ -1289,7 +1402,11 @@ export const resources = {
         description: 'Ανακαλύψτε τα οφέλη του νερού υδρογόνου για μια πιο υγιή ζωή.'
       },
       hero: {
+<<<<<<< HEAD
         slide1Title: 'Δύναμη Υδρογόνου & Φύσης',
+=======
+        slide1Title: 'ΒΙΟΔΥΝΑΜΙΚΟ ΕΛΑΙΟΛΑΔΟ',
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
         slide1Subtitle: 'Κτήμα Κούσες',
         slide1Button: 'Μάθετε Περισσότερα',
         slide2Title: 'Το Μέλλον της Ενέργειας είναι το Υδρογόνο',
@@ -1669,6 +1786,7 @@ export const resources = {
           seeMore: "ΔΕΙΤΕ ΠΕΡΙΣΣΟΤΕΡΑ"
         },
         organicWine: {
+<<<<<<< HEAD
           title: "Βιολογικό & Βιοδυναμικό Κρασί",
           subtitle: "Η Παράδοση Συναντά την Καινοτομία",
           section: {
@@ -1690,6 +1808,28 @@ export const resources = {
             ],
             conclusion: "Το αποτέλεσμα είναι κρασιά που εκφράζουν πραγματικά το terroir και τον τρύγο τους, με αξιοσημείωτη καθαρότητα και χαρακτήρα.",
             imageAlt: "Βιοδυναμικός Αμπελώνας"
+=======
+          subtitle: "ORGANIC-BIODYNAMIC",
+          title: "Organic Biodynamic Wine",
+          section: {
+            title: "ORGANIC & BIODYNAMIC WINES",
+            description: "Organic wine is wine produced from grapes grown according to the principles of organic farming, which usually excludes the use of artificial chemical fertilizers, pesticides, fungicides and herbicides.",
+            trend: "Organic and Biodynamic wines have been a big trend in the world vineyard for a few years now.",
+            biodynamic: "Biodynamic wines are wines based on the principles of organic cultivation, while applying a planting calendar that depends on astronomical configurations, as the earth is treated as a living and receptive organism.",
+            imageAlt: "Organic Wine Varieties"
+          },
+          biodynamicSection: {
+            title: "What is biodynamic winemaking?",
+            description: "Biodynamic winemaking takes a holistic approach to agriculture, based on following the course of the heavenly bodies (the moon, planets and stars). All biodynamic farming practices take place according to the lunar cycle, following the belief that certain days are better for certain farming tasks and rituals than others and that doing them at the right time yields better results.",
+            benefits: [
+              "Contributes to longevity",
+              "It reduces the risk of cardiovascular diseases",
+              "It prevents dementia",
+              "Contributes to well-being"
+            ],
+            conclusion: "Their philosophy follows the principle of the \"cycle of life\" and although it may sound a little outdated, some of the best and most famous winemakers in the world have followed it fanatically for centuries!",
+            imageAlt: "Biodynamic Wine Grapes"
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
           },
           benefitsSection: {
             title: "ΤΑ ΟΦΕΛΗ",
@@ -1885,6 +2025,7 @@ export const resources = {
         },
         discoverButton: "ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ"
       },
+<<<<<<< HEAD
       biodynamicOil: {
         hero: {
           title: 'ΒΙΟΔΥΝΑΜΙΚΟ ΛΑΔΙ',
@@ -1921,6 +2062,88 @@ export const resources = {
             title: 'Οφέλη για την Υγεία',
             description: 'Μελέτες έχουν δείξει ότι η τακτική κατανάλωση υψηλής ποιότητας ελαιολάδου μπορεί να μειώσει τον κίνδυνο χρόνιων ασθενειών και να προωθήσει τη μακροζωία.'
           }
+=======
+      biologicalOliveOil: {
+        hero: {
+          title: "Βιολογικό Ελαιόλαδο",
+          subtitle: "Νιώστε την αγνή ουσία της φύσης σε κάθε σταγόνα"
+        },
+        sections: {
+          intro: {
+            title: "Βιοδυναμικό, βιολογικό Ελαιόλαδο!",
+            subtitle: "Το πρώτο βιοδυναμικό, βιολογικό ελαιόλαδο στην Ελλάδα, με πιστοποίηση Demeter",
+            description: "Ένα εξαιρετικό ελαιόλαδο με προέλευση την Κρήτη. Οι ελιές και οι θάμνοι καλλιεργούνται σύμφωνα με τις αρχές της Βιοδυναμικής γεωργίας και συνυπάρχουν με την άγρια βλάστηση. Πιστοποιημένο από τη Dio (Βιολογικό ΕΞΑΙΡΕΤΙΚΟ ΠΑΡΘΕΝΟ ΕΛΑΙΟΛΑΔΟ – Ελλάδα) και τη Demeter (Βιοδυναμικό ΕΞΑΙΡΕΤΙΚΟ ΠΑΡΘΕΝΟ ΕΛΑΙΟΛΑΔΟ – Γερμανία)."
+          },
+          farming: {
+            title: "Τι είναι η Βιοδυναμική Καλλιέργεια;",
+            description: "Η βιοδυναμική καλλιέργεια είναι μια μέθοδος βιολογικής καλλιέργειας που αναπτύχθηκε αρχικά από τον Rudolf Steiner και χρησιμοποιεί αυτό που οι υποστηρικτές περιγράφουν ως \"ολιστική κατανόηση των γεωργικών διαδικασιών\". Ένα από τα πρώτα κινήματα βιώσιμης γεωργίας, αντιμετωπίζει τη γονιμότητα του εδάφους, την ανάπτυξη των φυτών και τη φροντίδα των ζώων ως οικολογικά αλληλένδετες εργασίες."
+          },
+          approach: {
+            title: "Η Βιολογική μας Προσέγγιση",
+            description: "Η βιοδυναμική έχει πολλά κοινά με άλλες βιολογικές προσεγγίσεις – δίνει έμφαση στη χρήση κοπριάς και κομπόστ και αποκλείει τη χρήση τεχνητών χημικών στο έδαφος και τα φυτά. Οι μοναδικές μέθοδοι της βιοδυναμικής προσέγγισης περιλαμβάνουν την αντιμετώπιση των ζώων, των καλλιεργειών και του εδάφους ως ενιαίο σύστημα."
+          },
+          production: {
+            title: "Τοπική Παραγωγή & Διανομή",
+            description: "Έμφαση από την αρχή στα συστήματα τοπικής παραγωγής και διανομής, χρήση παραδοσιακών και ανάπτυξη νέων τοπικών ποικιλιών, και χρήση αστρολογικού ημερολογίου σποράς και φύτευσης."
+          }
+        }
+      },
+      biodynamicOil: {
+        hero: {
+          title: "Biodynamic Oil Farming",
+          subtitle: "Traditional methods meet modern sustainability"
+        },
+        cultivation: {
+          title: "Biodynamic Olive Cultivation",
+          description: "The organic cultivation of the olive is based on methods of rejuvenating the soil of the olive grove, on the recycling of the by-products and other available organic materials and on the reproduction and protection of the environment. This method of olive production, in addition to producing an excellent quality olive oil, limits the contamination of the soil, water and air with agrochemicals and at the same time contributes to the preservation of the diversity of valuable plants and animals.",
+          highlight: "The first Biodynamic Olive Oil in Crete, certified with Demeter and Dio!"
+        },
+        benefits: {
+          title: "The Benefits",
+          description: "Olive oil is one of the first fatty substances used by the Mediterranean peoples both in nutrition and in medicine and cosmetology, as medicine and cosmetics. Today, due to its special beneficial and organoleptic characteristics and its contribution to the prevention of many diseases, it is of great interest to the scientific world, health professionals and consumers.",
+          stats: {
+            omega6: "Omega-6: 9.7%",
+            omega3: "Omega-3: 0.76%",
+            vitaminE: "Vitamin E: 72% of the RDA",
+            vitaminK: "Vitamin K: 75% of the RDA"
+          },
+          additional: "Olive oil is the only oil that comes from the whole fruit and not the seed. Olive oil is rich in oleic acid and other antioxidants, such as vitamin E and phenols."
+        },
+        moreBenefits: {
+          title: "MORE BENEFITS",
+          properties: {
+            title: "Properties",
+            description: "It has the ability to reduce LDL \"bad\" cholesterol in the blood and increase HDL \"good\", preventing atherosclerosis and the risk of developing coronary heart disease."
+          },
+          nutritionalValue: {
+            title: "Nutritional value",
+            description: "It benefits the gastrointestinal system, improves digestion & helps good bowel function."
+          },
+          healthBenefits: {
+            title: "Health Benefits",
+            description: "It contains phytochemicals capable of triggering the death of cancer cells and may help reduce the risk of various types of cancer."
+          }
+        },
+        benefitsSection: {
+          title: "THE BENEFITS",
+          benefits: [
+            {
+              number: "01",
+              title: "Contributes to longevity",
+              description: "A study has shown that occasional alcohol consumption can give you extra years of life."
+            },
+            {
+              number: "02",
+              title: "It reduces the risk of cardiovascular diseases",
+              description: "they increase levels of good cholesterol, which protects the heart by improving factors that affect blood clotting and reducing the risk of heart attacks and strokes."
+            },
+            {
+              number: "03",
+              title: "It prevents dementia",
+              description: "Moderate alcohol consumption reduces the risk of developing Alzheimer's and other forms of dementia by up to 23%, according to the findings of a study involving 365,000 people."
+            }
+          ]
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
         }
       },
       oilBenefitsSection: {
@@ -1994,6 +2217,7 @@ export const resources = {
           description: "Περιηγηθείτε στην πλήρη σειρά φυσικών συμπληρωμάτων διατροφής που έχουν σχεδιαστεί για να υποστηρίξουν την υγεία και την ευεξία σας.",
           button: "Δείτε Όλα τα Προϊόντα"
         }
+<<<<<<< HEAD
       },
       biologicalOliveOil: {
         hero: {
@@ -2531,6 +2755,8 @@ export const resources = {
         filterHydrogen: "Υδρογόνο",
         filterOrganic: "Βιολογικά",
         filterWine: "Κρασί"
+=======
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
       }
     }
   }

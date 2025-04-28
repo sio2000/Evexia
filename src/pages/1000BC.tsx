@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import image1000bc from '/assets/images/1000bc.png';
+<<<<<<< HEAD
 import image1000bc2 from '/assets/images/1000bc2.png';
+=======
+import image1000bc2 from '/assets/images/1000bc2.jpeg';
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
 import heroImage1 from '/assets/images/hero1000bc.png';
 import heroImage2 from '/assets/images/hero1000bc2.png';
 import bottleImage from '/assets/images/bottle.png';
@@ -110,7 +114,11 @@ const BC1000Page = () => {
                   to="/organic-biodynamic-wine" 
                   className="inline-flex items-center px-8 py-3 bg-[#D89084] text-white font-medium rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 cursor-pointer z-10"
                 >
+<<<<<<< HEAD
                   {t('hero.exploreButton')}
+=======
+                  Explore
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               )}
@@ -294,9 +302,15 @@ const BC1000Page = () => {
               </div>
 
               {/* Button */}
+<<<<<<< HEAD
               <Link to="/products" className="mt-8 inline-block px-8 py-3 bg-[#E5B3B3] text-white font-medium rounded-lg hover:bg-[#d89f9f] transition-colors">
                 {t('organicFarming.discoverButton')}
               </Link>
+=======
+              <button className="mt-8 px-8 py-3 bg-[#E5B3B3] text-white font-medium rounded-lg hover:bg-[#d89f9f] transition-colors">
+                {t('organicFarming.discoverButton')}
+              </button>
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
             </div>
           </div>
         </div>
@@ -363,7 +377,11 @@ const BC1000Page = () => {
                     {t('productCategories.organicWine.subtitle')}
                   </p>
                   <div className="flex items-center justify-center space-x-2 text-[#E5B3B3] group-hover:text-[#d89f9f] transition-colors">
+<<<<<<< HEAD
                     <span className="font-medium text-sm">{t('productCategories.biodynamicOil.seeMore')}</span>
+=======
+                    <span className="font-medium text-sm">{t('productCategories.organicWine.seeMore')}</span>
+>>>>>>> a41573bf87bd3620edd6e1d72a390ed0a3068342
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
